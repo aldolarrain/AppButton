@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.MainPage">
+    <Grid Margin="20,35,20,20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*" />
+            <ColumnDefinition Width="0.6*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <Entry x:Name="cityEntry"
+               Grid.ColumnSpan="2"
+               Text="bolivia" />
+        <Button Grid.ColumnSpan="2"
+                Grid.Row="1"
+                Text="Obtener Informacion"
+                Clicked="OnButtonClicked" />
+        <Label Grid.Row="2"
+               Text="Name:" />
+        <Label Grid.Row="2"
+               Grid.Column="1"
+               Text="{Binding Name}" />
+        <Label Grid.Row="3"
+               Text="Capital:" />
+        <Label Grid.Row="3"
+               Grid.Column="1"
+               Text="{Binding Capital}" />
+        <Label Grid.Row="4"
+               Text="Alpha2code:" />
+        <Label Grid.Row="4"
+               Grid.Column="1"
+               Text="{Binding Alpha2Code}" />
+    </Grid>
+</ContentPage>
